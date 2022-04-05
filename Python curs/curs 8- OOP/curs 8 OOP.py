@@ -71,4 +71,3 @@
 # angajatSRI1.numeProiectAlpha = "Cod Secret"
 # angajatSRI1.numeProiectAlpha = "Cod Si mai Secret"
 # print(angajatSRI1.nume_vechi)
-asas

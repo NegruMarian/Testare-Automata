@@ -37,14 +37,14 @@ class FormaGeometrica(ABC):
 # INHERITANCE
 # Clasa Patrat - mosteneste FormaGeometrica
 class Patrat(FormaGeometrica):
-
+    __latura = 10
     # constructor pt latura
     def __init__(self, latura):
-        self.latura = latura
+        self.__latura = latura
 
     # ENCAPSULATION
     # latura este proprietate privata
-    __latura = 10
+
 
     # Implementati getter, setter, deleter pt latura
     @property
@@ -52,19 +52,19 @@ class Patrat(FormaGeometrica):
         return self.__latura
 
     @latura.getter
-    def get_latura(self, latura):
-        if latura > 0:
-            self.__latura = latura
+    def latura(self):
+        # if latura > 0:
+        #     self.__latura = latura
             return self.__latura
-        else:
-            print('Lungimea laturii nu este valida')
+        # else:
+        #     print('Lungimea laturii nu este valida')
 
     @latura.setter
-    def set_latura(self, latura):   # aici trebuie cod de update
-        pass
+    def latura(self, latura):   # aici trebuie cod de update
+        self.__latura = latura
 
     @latura.deleter
-    def delet_latura(self):
+    def latura(self):
         self.__latura = 0
 
     # Implementati metoda ceruta de interfata
@@ -72,6 +72,7 @@ class Patrat(FormaGeometrica):
     def aria(self):
         self.aria= self.__latura*self.__latura
         return self.aria
+
 
 
 # Clasa Cerc - mosteneste FormaGeometrica
@@ -111,10 +112,16 @@ class Cerc(FormaGeometrica):
 # Definiti o noua metoda descrie - printati ‘Eu nu am colturi’
     def descrie(self):
         print('Eu nu am colturi')
-#
+
+
 # Creati un obiect de tip Patrat si jucati-va cu metodele lui
-# cutie = Patrat()
-# print(cutie.aria(4))
+cutie = Patrat(5)
+print(cutie.aria())
+print(cutie.latura)
+cutie.latura=6
+print(cutie.latura)
+del cutie.latura
+print(cutie.latura)
 
 # Creati un obiect de tip Cerc si jucati-va cu metodele lui
 #
