@@ -80,9 +80,7 @@ class FormaGeometrica(ABC):
 # print(cutie.latura)
 # cutie.latura=7
 # print(cutie.latura)
-# del cutie.latura
-# print(cutie.latura)
-# print(cutie.aria())
+# print(cutie.aria())  #aici afiseaza tot aria avand latura initiala de 10 in loc de 7
 # cutie.latura= -8
 # print(cutie.latura)
 # print(cutie.aria())
