@@ -26,7 +26,7 @@ class FormaGeometrica(ABC):
     @abstractmethod
     def aria(self):
         pass
-        # raise NotImplementedError
+
 
     # Contine o metoda a clasei descrie() - aceasta printeaza pe ecran ‘Cel mai probabil am colturi’
     def descrie(self):
@@ -36,94 +36,109 @@ class FormaGeometrica(ABC):
 #
 # INHERITANCE
 # Clasa Patrat - mosteneste FormaGeometrica
-class Patrat(FormaGeometrica):
-    __latura = 10
-    # constructor pt latura
-    def __init__(self, latura):
-        self.__latura = latura
-
-    # ENCAPSULATION
-    # latura este proprietate privata
-
-
-    # Implementati getter, setter, deleter pt latura
-    @property
-    def latura(self):
-        return self.__latura
-
-    @latura.getter
-    def latura(self):
-        # if latura > 0:
-        #     self.__latura = latura
-            return self.__latura
-        # else:
-        #     print('Lungimea laturii nu este valida')
-
-    @latura.setter
-    def latura(self, latura):   # aici trebuie cod de update
-        self.__latura = latura
-
-    @latura.deleter
-    def latura(self):
-        self.__latura = 0
-
-    # Implementati metoda ceruta de interfata
-
-    def aria(self):
-        self.aria= self.__latura*self.__latura
-        return self.aria
-
-
-
-# Clasa Cerc - mosteneste FormaGeometrica
-class Cerc(FormaGeometrica):
-
-
-    # constructor pt raza
-    def __init__(self, raza):
-        __raza = raza
-
-    # raza este proprietate privata
-    __raza = 15
-    # Implementati getter, setter, deleter pt raza
-    @property
-    def raza(self):
-        return self.__raza
-
-    @raza.getter
-    def get_raza(self):
-        return self.__raza
-
-    @raza.setter
-    def setter_raza(self,raza):
-        self.__raza = raza
-
-    @raza.deleter
-    def deleter_raza(self):
-        self.__raza = None
-
-
-# Implementati metoda ceruta de interfata - in calcul folositi field PI mostenit din clasa parinte
-    def aria(self):
-        self.aria =(self.__raza*self.__raza) * self.PI
-        return self.aria
-
-# POLYMORPHISM
-# Definiti o noua metoda descrie - printati ‘Eu nu am colturi’
-    def descrie(self):
-        print('Eu nu am colturi')
-
+# class Patrat(FormaGeometrica):
+#     __latura = 10
+#     # constructor pt latura
+#     def __init__(self, latura):
+#         self.__latura = latura
+#
+#     # ENCAPSULATION
+#     # latura este proprietate privata
+#
+#
+#     # Implementati getter, setter, deleter pt latura
+#     @property
+#     def latura(self):
+#         return self.__latura
+#
+#     @latura.getter
+#     def latura(self):
+#         return self.__latura
+#
+#     @latura.setter
+#     def latura(self, latura):   # aici trebuie cod de update
+#          if latura > 0:
+#               self.__latura = latura
+#
+#          else:
+#               print('Lungimea laturii nu este valida')
+#
+# #
+#     @latura.deleter
+#     def latura(self):
+#         self.__latura = 0
+#
+#     # Implementati metoda ceruta de interfata
+#
+#     def aria(self):
+#         self.aria= self.__latura*self.__latura
+#         return self.aria
 
 # Creati un obiect de tip Patrat si jucati-va cu metodele lui
-cutie = Patrat(5)
-print(cutie.aria())
-print(cutie.latura)
-cutie.latura=6
-print(cutie.latura)
-del cutie.latura
-print(cutie.latura)
+# cutie = Patrat(10)
+# print(cutie.aria())
+# print(cutie.latura)
+# cutie.latura=7
+# print(cutie.latura)
+# del cutie.latura
+# print(cutie.latura)
+# print(cutie.aria())
+# cutie.latura= -8
+# print(cutie.latura)
+# print(cutie.aria())
+
+#Clasa Cerc - mosteneste FormaGeometrica
+# class Cerc(FormaGeometrica):
+#     __raza = 15
+#
+#     # constructor pt raza
+#     def __init__(self, raza):
+#         __raza = raza
+#
+#     # raza este proprietate privata
+#
+#     # Implementati getter, setter, deleter pt raza
+#     @property
+#     def raza(self):
+#         return self.__raza
+#
+#     @raza.getter
+#     def raza(self):
+#         return self.__raza
+#
+#     @raza.setter
+#     def raza(self,raza):
+#         if raza > 0:
+#             self.__raza = raza
+#         else:
+#             print('raza are o valoare ireala')
+#
+#     @raza.deleter
+#     def raza(self):
+#         self.__raza = None
+#
+#
+# # Implementati metoda ceruta de interfata - in calcul folositi field PI mostenit din clasa parinte
+#     def aria(self):
+#         self.aria =(self.__raza*self.__raza) * self.PI
+#         return self.aria
+#
+# # POLYMORPHISM
+# # Definiti o noua metoda descrie - printati ‘Eu nu am colturi’
+#     def descrie(self):
+#         print('Eu nu am colturi')
+
+
+
+
 
 # Creati un obiect de tip Cerc si jucati-va cu metodele lui
+# mingeVolei = Cerc(20)
+# print(mingeVolei.raza)
+# mingeVolei.raza = 20
+# print(mingeVolei.raza)
+# mingeVolei.descrie()
+# print(mingeVolei.aria())
 #
 # 3. Actualizati proiectul pe github facand un push la noul cod
 # In Folder de teme ajunge sa puneti doar linkul cu proiectul vostru public
