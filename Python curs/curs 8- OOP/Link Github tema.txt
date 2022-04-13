@@ -1,0 +1,3 @@
+Link Github tema 8
+
+https://github.com/NegruMarian/Testare-Automata/blob/main/Python%20curs/Teme/tema%208-OOP.py
