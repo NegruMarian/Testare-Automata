@@ -52,6 +52,24 @@ chrome.maximize_window()
 # sleep(3)
 # chrome.quit()
 
+#4
+# navigam catre un url
+# chrome.get('https://www.phptravels.net/signup')
+#
+# chrome.find_elements(By.CLASS_NAME, 'form-control')
+#
+# sleep(2)
+#
+# lista_formular = chrome.find_elements(By.TAG_NAME, 'input')
+# lista_formular[1].send_keys('Marian')
+# lista_formular[2].send_keys('Negru')
+# lista_formular[3].send_keys('07xxxxx')
+# lista_formular[4].send_keys('marian@gmail.com')
+# lista_formular[5].send_keys('parola')
+# sleep(3)
+#
+# chrome.quit()
+
 ###      By ID
 
 # #1
@@ -74,8 +92,8 @@ chrome.maximize_window()
 # sleep(3)
 # chrome.quit()
 
-#         BY  Link text
 
+#         BY  Link text
 
 #1
 # chrome.get('https://the-internet.herokuapp.com/')
@@ -124,14 +142,33 @@ chrome.maximize_window()
 # chrome.find_element(By.PARTIAL_LINK_TEXT,'after the fact').click()
 # sleep(3)
 # chrome.quit()
+
+
 #3
-# chrome.get('https://jules.app/sign-in')
-# chrome.find_element(By.PARTIAL_LINK_TEXT,'password').click()
+# chrome.get('https://jules.app/')
+# chrome.find_element(By.PARTIAL_LINK_TEXT,'Sign').click()
+#pas = chrome.find_elements(By.PARTIAL_LINK_TEXT,'Sign')
+#print(len(pas))
 # sleep(3)
 # chrome.quit()
 
 
+#    CSS - Class
+#1
+# chrome.get('https://www.phptravels.net/signup')
+# chrome.find_elements(By.CSS_SELECTOR,'input.form-control')
+# find= chrome.find_elements(By.CSS_SELECTOR,'input.form-control')
+# sleep(3)
+# find[0].send_keys('hello')
+# find[1].send_keys('I Am')
+# sleep(3)
+# chrome.quit()
 
+
+# CSS-ID
+# chrome.get('https://www.techlistic.com/p/selenium-practice-form.html')
+# chrome.find_element(By.CSS_SELECTOR,'input#datepicker').send_keys('15.04.22')
+# sleep(3)
 
 
 

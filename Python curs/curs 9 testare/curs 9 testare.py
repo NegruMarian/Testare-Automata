@@ -118,20 +118,8 @@ from selenium.webdriver.common.by import By
 #
 # chrome.quit()
 #
-# # Gabriela
-# # Radulescu
-# # 8: 24
-# # PM
-# # avem nevoie sa importam cateva librarii gratuite care ne ajuta sa controlam chrome
-# from time import sleep
-# from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.common.by import By
-#
-# # initializam chrome
-# s = Service(ChromeDriverManager().install())
-# chrome = webdriver.Chrome(service=s)
+
+
 #
 # # maximizam fereastra
 # chrome.maximize_window()
