@@ -8,13 +8,13 @@
 # (obs: nu 3 pe fiecare pagina, 3 in total, de pe ce site doriti, la alegere. Nu toate sites vor avea elemente cu atributul name de ex)
 #
 # 3 selectors by:
-# Id
-# Link text
-# Partial link text
+# Id                        rezolvat
+# Link text                 rezolvat
+# Partial link text         rezolvat
 # Name
 # Tag*
-# Class name*
-# Css (1 dupa id, 1 dupa clasa, 1 dupa atribut=valoare_partiala)
+# Class name*                rezolvat
+# Css (1 dupa id, 1 dupa clasa, 1 dupa atribut=valoare_partiala)     lipseste cel de atribut
 
 from time import sleep
 from selenium import webdriver
@@ -152,6 +152,25 @@ chrome.maximize_window()
 # sleep(3)
 # chrome.quit()
 
+# By NAME
+#1
+# chrome.get('http://automationpractice.com/index.php')
+# chrome.find_element(By.NAME, 'search_query').send_keys('Tesla')
+# sleep(5)
+# chrome.quit()
+
+#2
+# chrome.get('http://automationpractice.com/index.php?id_category=8&controller=category')
+# chrome.find_element(By.NAME, 'layered_id_attribute_group_1').click()
+# sleep(3)
+# chrome.quit()
+
+
+#3
+# chrome.get('http://automationpractice.com/index.php')
+# chrome.find_element(By.NAME,'email').send_keys('marian@gmail.com')
+# sleep(3)
+# chrome.quit()
 
 #    CSS - Class
 #1
