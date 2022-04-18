@@ -11,7 +11,7 @@
 # Id                        rezolvat
 # Link text                 rezolvat
 # Partial link text         rezolvat
-# Name
+# Name                      rezolvat
 # Tag*
 # Class name*                rezolvat
 # Css (1 dupa id, 1 dupa clasa, 1 dupa atribut=valoare_partiala)     lipseste cel de atribut
@@ -172,6 +172,36 @@ chrome.maximize_window()
 # sleep(3)
 # chrome.quit()
 
+
+# By Tag NAME
+
+#1
+# chrome.get('https://formy-project.herokuapp.com/autocomplete')
+# chrome.find_element(By. TAG_NAME, 'input').send_keys('marian@gmail.com')
+# lista_input = chrome.find_elements(By.TAG_NAME, 'input')
+# lista_input[1].send_keys('Aleea Meseriasilo')
+# lista_input[2].send_keys('Zimbrului')
+# lista_input[3].send_keys('Bucuresti')
+# lista_input[4].send_keys('bucursti')
+# lista_input[5].send_keys('1258')
+# lista_input[6].send_keys('Romania')
+# sleep(8)
+# chrome.quit()
+
+
+#2
+# chrome.get('https://formy-project.herokuapp.com/form')
+# chrome.find_element(By.TAG_NAME,'input').send_keys('Marian')
+# list= chrome.find_elements(By.TAG_NAME, 'input')
+# list[1].send_keys('Negru')
+# list[2].send_keys('Automation Testing')
+# chrome.find_element(By.ID,'radio-button-1').click()
+# chrome.find_element(By.CSS_SELECTOR,'input#checkbox-1').click()
+# #chrome.find_element(By.XPATH,'//input[@id="select-menu"]').click()    ###### nu merge si nu stiu dc
+# chrome.find_element(By.CSS_SELECTOR,'input[placeholder="mm/dd/yyyy"]').send_keys('12.2.22')
+# sleep(5)
+# chrome.quit()
+
 #    CSS - Class
 #1
 # chrome.get('https://www.phptravels.net/signup')
@@ -185,6 +215,8 @@ chrome.maximize_window()
 
 
 # CSS-ID
+
+
 # chrome.get('https://www.techlistic.com/p/selenium-practice-form.html')
 # chrome.find_element(By.CSS_SELECTOR,'input#datepicker').send_keys('15.04.22')
 # sleep(3)

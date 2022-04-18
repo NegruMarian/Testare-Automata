@@ -77,34 +77,36 @@ chrome.maximize_window()
 
 #
 # # navigam catre un url
-chrome.get('http://www.seleniumframework.com/Practiceform/')
-sleep(2)
+# chrome.get('http://www.seleniumframework.com/Practiceform/')
+# sleep(2)
 #
 # # selector by Name
 
 
-chrome.find_element(By.NAME, 'country').send_keys('Romania')
-
-sleep(3)
-
-chrome.find_element(By.NAME, 'company').send_keys('IT Factory')
-
-sleep(3)
-
-chrome.quit()
+# chrome.find_element(By.NAME, 'country').send_keys('Romania')
+#
+# sleep(3)
+#
+# chrome.find_element(By.NAME, 'company').send_keys('IT Factory')
+#
+# sleep(3)
+#
+# chrome.quit()
 #
 
 
 #
-# # maximizam fereastra
-# chrome.maximize_window()
+
 #
 # # navigam catre un url
 # chrome.get('https://formy-project.herokuapp.com/form')
 #
+
 # # selector by Tag - ia primul tot tp. - e ok doar daca avem tag unic
+
+
 # chrome.find_element(By.TAG_NAME, 'input').send_keys('Test')
-#
+
 # sleep(3)
 #
 # # gasim mai multe si le punem in lista
@@ -112,29 +114,13 @@ chrome.quit()
 #                                     'input')  # am definit o lista care sa stocheze toate elementele de pe site identificabile prin tag-ul de input
 # lista_taguri[1].send_keys('Test1')
 # print(len(lista_taguri))
-#
+
 # sleep(3)
 #
 # chrome.quit()
 #
-# # Gabriela
-# # Radulescu
-# # 8: 34
-# # PM
-# # avem nevoie sa importam cateva librarii gratuite care ne ajuta sa controlam chrome
-# from time import sleep
-# from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.common.by import By
 #
-# # initializam chrome
-# s = Service(ChromeDriverManager().install())
-# chrome = webdriver.Chrome(service=s)
-#
-# # maximizam fereastra
-# chrome.maximize_window()
-#
+
 # # navigam catre un url
 # chrome.get('https://formy-project.herokuapp.com/form')
 #
@@ -149,28 +135,17 @@ chrome.quit()
 #
 # sleep(3)
 # chrome.quit()
+
+
+
 #
-# # Gabriela
-# # Radulescu
-# # 8: 42
-# # PM
-# # avem nevoie sa importam cateva librarii gratuite care ne ajuta sa controlam chrome
-# from time import sleep
-# from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.common.by import By
 #
-# # initializam chrome
-# s = Service(ChromeDriverManager().install())
-# chrome = webdriver.Chrome(service=s)
 #
-# # maximizam fereastra
-# chrome.maximize_window()
+
 #
 # # navigam catre un url
 # chrome.get('https://formy-project.herokuapp.com/form')
-#
+#9
 # # selector by CSS - ID
 # chrome.find_element(By.CSS_SELECTOR, 'input#first-name').send_keys('An')  # # = identificator pentru id
 #
@@ -180,13 +155,13 @@ chrome.quit()
 #
 # # selector by CSS - Class - only first one if multiple matches
 # chrome.find_element(By.CSS_SELECTOR, 'input.form-control').send_keys('dy')  # . = identificator pentru clasa
-#
+# #
 # sleep(2)
 #
 # # selector by CSS - atribut=valoare
 # chrome.find_element(By.CSS_SELECTOR, 'input[placeholder="Enter last name"]').send_keys(
 #     'S')  # [] = identificator pentru atribut = valoare
-#
+# #
 # sleep(2)
 #
 # # selector by CSS - atribut=valoare partiala + parinte -> copil
@@ -197,30 +172,14 @@ chrome.quit()
 # chrome.quit()
 # # (edited)
 #
-# # Gabriela
-# # Radulescu
-# # 9: 04
-# # PM
-# # avem nevoie sa importam cateva librarii gratuite care ne ajuta sa controlam chrome
-# from time import sleep
-# from selenium import webdriver
-# from selenium.webdriver.chrome.service import Service
-# from webdriver_manager.chrome import ChromeDriverManager
-# from selenium.webdriver.common.by import By
 #
-# # initializam chrome
-# s = Service(ChromeDriverManager().install())
-# chrome = webdriver.Chrome(service=s)
-#
-# # maximizam fereastra
-# chrome.maximize_window()
 #
 # # Xpath -> recomandat - cel mai flexibil
 #
 # # navigam catre un url
 # chrome.get('https://formy-project.herokuapp.com/form')
-#
-# # selector by Xpath - atribut=valoare
+# #
+# # # selector by Xpath - atribut=valoare
 # chrome.find_element(By.XPATH, '//input[@id="first-name"]').send_keys('A')
 #
 # sleep(2)
