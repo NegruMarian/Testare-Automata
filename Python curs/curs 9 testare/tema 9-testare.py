@@ -12,9 +12,9 @@
 # Link text                 rezolvat
 # Partial link text         rezolvat
 # Name                      rezolvat
-# Tag*
+# Tag*                      rezolvat
 # Class name*                rezolvat
-# Css (1 dupa id, 1 dupa clasa, 1 dupa atribut=valoare_partiala)     lipseste cel de atribut
+# Css (1 dupa id, 1 dupa clasa, 1 dupa atribut=valoare_partiala)
 
 from time import sleep
 from selenium import webdriver
@@ -227,6 +227,39 @@ chrome.maximize_window()
 #
 # La Xpath:
 # 3 dupa atribut valoare
+#1
+# chrome.get('https://formy-project.herokuapp.com/autocomplete')
+# chrome.find_element(By.XPATH,'//input[@id="autocomplete"]').send_keys('Marian')
+# sleep(3)
+# chrome.quit()
+
+#2
+# chrome.get('http://automationpractice.com/index.php')
+# chrome.find_element(By.XPATH,'//*[@id="search_query_top"]').send_keys('Google.com')
+# sleep(3)
+# chrome.quit()
+
+#3
+# chrome.get('https://formy-project.herokuapp.com/autocomplete')
+# chrome.find_element(By.XPATH,'//html/body/div[1]/form/div/div/input').send_keys('M')
+# sleep(1)
+# chrome.find_element(By.XPATH,'/html/body/div[1]/form/div/div[2]/input').send_keys('a')
+# sleep(1)
+# chrome.find_element(By.XPATH,'/html/body/div[1]/form/div/div[3]/input').send_keys('r')
+# sleep(1)
+#
+# chrome.find_element(By.XPATH,'/html/body/div[1]/form/div/div[4]/input').send_keys('i')
+# sleep(1)
+# chrome.find_element(By.XPATH,'/html/body/div[1]/form/div/div[5]/input').send_keys('a')
+# sleep(1)
+# chrome.find_element(By.XPATH,'/html/body/div[1]/form/div/div[6]/input').send_keys('n')
+# sleep(1)
+# chrome.find_element(By.XPATH,'/html/body/div[1]/form/div/div[7]/input').send_keys('Romania')
+# sleep(3)
+# chrome.quit()
+
+
+
 # 3 dupa textul de pe element
 # 1 dupa partial text
 #
