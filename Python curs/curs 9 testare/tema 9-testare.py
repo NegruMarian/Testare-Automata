@@ -88,7 +88,7 @@ chrome.maximize_window()
 
 #3
 # chrome.get('https://the-internet.herokuapp.com/dynamic_loading/1')
-# chrome.find_element(By.ID,'start').click()   #  nu da eroare dar nici nu da click....d c?
+# chrome.find_element(By.XPATH,'//*[@id="start"]/button').click()
 # sleep(3)
 # chrome.quit()
 
@@ -116,10 +116,12 @@ chrome.maximize_window()
 
 #4
 # chrome.get('https://www.techlistic.com/p/selenium-practice-form.html')
-# sleep(5)
+# chrome.find_element(By.ID,"ez-accept-all").click()
+# chrome.find_element(By.ID,"cookieChoiceDismiss").click()
 # chrome.find_element(By.LINK_TEXT,'Automate Amazon like E-Commerce website with Selenium').click()  #nu merge pe acestsite, am incercat mai multe link-uri
 # sleep(5)
-#chrome.quit()
+# chrome.quit()
+
 ####
 #5
 # chrome.get('https://www.techlistic.com/p/selenium-practice-form.html')    #putem sa scapam de reclame/politica de confidentialitate ca sa ruleze mai departe?
@@ -146,7 +148,6 @@ chrome.maximize_window()
 
 #3
 # chrome.get('https://jules.app/')
-# chrome.find_element(By.PARTIAL_LINK_TEXT,'Sign').click()
 #pas = chrome.find_elements(By.PARTIAL_LINK_TEXT,'Sign')
 #print(len(pas))
 # sleep(3)
@@ -197,7 +198,8 @@ chrome.maximize_window()
 # list[2].send_keys('Automation Testing')
 # chrome.find_element(By.ID,'radio-button-1').click()
 # chrome.find_element(By.CSS_SELECTOR,'input#checkbox-1').click()
-# #chrome.find_element(By.XPATH,'//input[@id="select-menu"]').click()    ###### nu merge si nu stiu dc
+# select = select(chrome.find_element(By.XPATH,'//*[@id="select-menu"]').click() )   ###### nu merge si nu stiu dc
+# select.select_by_visible_text("0-1")                                     # da eroare
 # chrome.find_element(By.CSS_SELECTOR,'input[placeholder="mm/dd/yyyy"]').send_keys('12.2.22')
 # sleep(5)
 # chrome.quit()

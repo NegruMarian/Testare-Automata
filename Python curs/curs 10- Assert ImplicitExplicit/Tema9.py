@@ -4,6 +4,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 
@@ -64,8 +66,8 @@ class Login(unittest.TestCase):
 # Test2
 # Verificati ca page title e corect
 #     def test_page_title(self):
-#         actual= self.chrome.title                                      ####Nu merge....
-#         print(f'Title is {actual}')
+#         actual= self.chrome.title                                     ####Nu merge...cred ca nu stiu eu de unde sa iau denumirea de titulu
+#         print(f'Title is {actual}')                                      # am gasit in html ca titlu este 'the internet' dar nu trebuie sa apara si pe pagina?
 #         expect = 'Welcome to the-internet'
 #         self.assertEqual(expect,actual,'Page title is incorect')
 #
@@ -164,29 +166,39 @@ class Login(unittest.TestCase):
 #
 # Test10
 # Completeaza cu user si pass valide
-    def test_user_pass(self):
-        self.chrome.get('https://the-internet.herokuapp.com/login')
-        self.chrome.find_element(By.XPATH,'//*[@id="username"]').send_keys('tomsmith')
-        self.chrome.find_element(By.XPATH,'//*[@id="password"]').send_keys('SuperSecretPassword!')
+#     def test_user_pass(self):
+        # self.chrome.get('https://the-internet.herokuapp.com/login')
+        # self.chrome.find_element(By.XPATH,'//*[@id="username"]').send_keys('tomsmith')
+        # self.chrome.find_element(By.XPATH,'//*[@id="password"]').send_keys('SuperSecretPassword!')
 # Click login
-        self.chrome.find_element(By.XPATH,'//*[@id="login"]/button/i').click()
+#         self.chrome.find_element(By.XPATH,'//*[@id="login"]/button/i').click()
 
 # Verifica ca noul url CONTINE /secure
-        new_url = self.chrome.current_url
-        self.assertTrue('/secure'in new_url)
+#         new_url = self.chrome.current_url
+#         self.assertTrue('/secure'in new_url)
 # Foloseste un explicit wait pentru elementul cu clasa ’flash succes’
 # Verifica ca elementul cu clasa=’flash succes’ este displayed
-        WebDriverWait(self.chrome, 5).until(EC.url_changes(''))        #nu inteleg cum sa folosesc explicit wait pt o clasa!!!
-        self.chrome.find_element(By.XPATH,'//’flash succes’')
-        self.assertTrue(element.is_displayed())
+#         WebDriverWait(self.chrome, 8).until(EC.presence_of_element_located((By.CLASS_NAME,'flash succes')))                                                    #nu merge..
+#         self.assertTrue(element.is_displayed())
 # Verifica ca mesajul de pe acest element CONTINE textul ‘secure area!’
+
 
 #
 # Test11
 # Completeaza cu user si pass valide
+#     def test_login_logout(self):
+#         self.chrome.get('https://the-internet.herokuapp.com/login')
+#         self.chrome.find_element(By.XPATH,'//*[@id="username"]').send_keys('tomsmith')
+#         self.chrome.find_element(By.XPATH,'//*[@id="password"]').send_keys('SuperSecretPassword!')
 # Click login
+#         self.chrome.find_element(By.XPATH, '//*[@id="login"]/button/i').click()
 # Click logout
+#         self.chrome.current_url
+#         self.chrome.find_element(By.XPATH,'//*[@id="content"]/div/a/i').click()
 # Verifica ca ai ajuns pe https://the-internet.herokuapp.com/login
+#         actual = self.chrome.current_url
+#         expect = 'https://the-internet.herokuapp.com/login'
+#         self.assertEqual(actual,expect,'Url is not the same')
 #
 #
 # BONUS
