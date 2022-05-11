@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/pythonProject/.idea/pythonProject.iml" filepath="$USER_HOME$/PycharmProjects/pythonProject/.idea/pythonProject.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/test/.idea/test.iml" filepath="$USER_HOME$/Downloads/test/.idea/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/testare automata.iml" filepath="$PROJECT_DIR$/.idea/testare automata.iml" />
     </modules>
   </component>

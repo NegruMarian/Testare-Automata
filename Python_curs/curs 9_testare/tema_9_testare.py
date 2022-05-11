@@ -29,28 +29,28 @@ chrome.maximize_window()
 
 #### By Class_name
 #1
-# chrome.get('http://automationpractice.com/index.php')
-#sleep(3)
-# first_name = chrome.find_elements(By.CLASS_NAME, 'sf-with-ul')
-# stocare_elemente = chrome.find_elements(By.CLASS_NAME, 'sf-with-ul')
-# print(len(stocare_elemente))
-# sleep(3)
-# chrome.quit()
+chrome.get('http://automationpractice.com/index.php')
+sleep(3)
+first_name = chrome.find_elements(By.CLASS_NAME, 'sf-with-ul')
+stocare_elemente = chrome.find_elements(By.CLASS_NAME, 'sf-with-ul')
+print(len(stocare_elemente))
+sleep(3)
+chrome.quit()
 #
 #2
-# chrome.get('https://jules.app/')
-# sleep(3)
-# chrome.find_elements(By.CLASS_NAME,'MuiInputBase-input')[0].send_keys('marian@gmail.com')
-# sleep(2)
-# test = chrome.find_elements(By.CLASS_NAME,'MuiInputBase-input')[1].send_keys('password')
-# sleep(2)
-# chrome.quit()
+chrome.get('https://jules.app/')
+sleep(3)
+chrome.find_elements(By.CLASS_NAME,'MuiInputBase-input')[0].send_keys('marian@gmail.com')
+sleep(2)
+test = chrome.find_elements(By.CLASS_NAME,'MuiInputBase-input')[1].send_keys('password')
+sleep(2)
+chrome.quit()
 
 #3
-# chrome.get('https://the-internet.herokuapp.com/tinymce')
-# chrome.find_element(By.CLASS_NAME,'tox-mbtn__select-label').click()
-# sleep(3)
-# chrome.quit()
+chrome.get('https://the-internet.herokuapp.com/tinymce')
+chrome.find_element(By.CLASS_NAME,'tox-mbtn__select-label').click()
+sleep(3)
+chrome.quit()
 
 #4
 # navigam catre un url
