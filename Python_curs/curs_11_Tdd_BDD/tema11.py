@@ -84,7 +84,9 @@ and I receive the message 'email address is already registered """
 @when('I click the forgot password and I introduce my email address')
 @then ('I receive the message - Your email address is invalid')
 
-@given('I open the ')
+@given('I open the login page')
+@when ('I populate with email addres')
+@then('I receive the message text- Your email address is invalid')
 #
 # Reminder:
 # Un user story are forma
@@ -101,6 +103,10 @@ and I receive the message 'email address is already registered """
 # a.	Home page https://the-internet.herokuapp.com/
 # -	Sa aiba cel putin 3 elemente inclusiv Form Authentication
 # -	Sa contina metode de click pe ele
+
+
+
+
 # b.	Login page https://the-internet.herokuapp.com/login
 # -	Sa contina user, pass, login_btn si metode pt interactiune cu ele
 # c.	Secure page https://the-internet.herokuapp.com/secure

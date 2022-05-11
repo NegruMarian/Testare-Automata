@@ -25,11 +25,7 @@ class Login(unittest.TestCase):
 # setUp()
 #  Driver
 # https://the-internet.herokuapp.com/
-    def setUp(self):
-        self.s = Service(ChromeDriverManager().install())
-        self.chrome = webdriver.Chrome(service=self.s)
-        self.chrome.maximize_window()
-        self.chrome.get('https://the-internet.herokuapp.com/')
+
 
         #self.chrome.find_element(By.CLASS_NAME,'heading')
 
